@@ -8,6 +8,11 @@ pygmentsStyle: pygments
 
 permalinks:
   post: /:filename/
+  
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
 
 params:
   project_name: Hyoban 的博客
