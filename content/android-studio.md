@@ -1,6 +1,6 @@
 ---
 title: 开始写一个 android 项目
-date: 2021-08-27T18:11:20+08:00
+date: 2021-07-27T18:11:20+08:00
 summary: 关于 Android studio 的配置
 ---
 
