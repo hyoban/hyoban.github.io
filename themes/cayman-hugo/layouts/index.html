@@ -1,5 +1,5 @@
 {{ define "main" }} 
-{{ $pages := .Site.AllPages }} 
+{{ $pages := site.RegularPages }} 
 {{ range $pages.GroupByDate "2006" }}
 <div>
   <h2>{{ .Key }}</h2>
