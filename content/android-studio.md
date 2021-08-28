@@ -62,3 +62,17 @@ task clean(type: Delete) {
 我们需要配置好 git ignore 文件，可以参考前面的谷歌项目示例，也可以参考 github 维护的 [示例](https://github.com/github/gitignore/blob/master/Android.gitignore)
 
 当然你可以排除你想要排除的，但是请确保别人 clone 下你的项目，可以马上跑起来
+
+## 使用 r8 来压缩应用体积
+
+我们只需要设置 minifyEnabled true 即可
+
+不过需要注意的是，一些第三方库使用到了反射，我们需要保留这些代码不被优化掉。要保留名称字段，在 proguard-rules.pro 文件中添加一个保留规则 -keep:
+
+1. litepal [ProGuard](https://github.com/guolindev/LitePal#proguard)
+2. serialization [ProGuard](https://github.com/Kotlin/kotlinx.serialization#android)
+
+### 参考
+
+[Shrink, obfuscate, and optimize your app](https://developer.android.google.cn/studio/build/shrink-code)
+[使用 R8 压缩您的应用](https://mp.weixin.qq.com/s/zDx-SdsqargT4JB6oMIrTw)
