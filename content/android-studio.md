@@ -13,12 +13,13 @@ summary: 关于 Android studio 的配置和踩坑记录
 
 ## idea 系快捷键
 
-cmd + shift + u 转换大小写
-option + shift + click 多光标
+- cmd + shift + u 转换大小写
 
-cmd + option + t 创建代码块供折叠
-cmd + . 折叠
-cmd + shift + + or - 快速折叠和展开全部代码块
+- option + shift + click 多光标
+
+- cmd + option + t 创建代码块供折叠
+- cmd + . 折叠
+- cmd + shift + + or - 快速折叠和展开全部代码块
 
 ## spotless 和 ktlint
 
@@ -30,7 +31,7 @@ cmd + shift + + or - 快速折叠和展开全部代码块
 ktlint --android applyToIDEAProject
 ```
 
-这只会影响当前 idea 项目，也是官方推荐的方法，你可以点击 [链接](https://github.com/pinterest/ktlint#-with-intellij-idea) 查看更多。
+这只会影响当前 idea 项目，也是官方推荐的方法，你可以点击 [链接](https://github.com/pinterest/ktlint#-with-intellij-idea) 查看更多
 
 ### 设置 spotless
 
@@ -58,5 +59,6 @@ task clean(type: Delete) {
 
 ## 启用版本控制
 
-我们需要配置好 git ignore 文件，可以参考前面的谷歌项目示例，也可以参考 github 维护的 [示例](https://github.com/github/gitignore/blob/master/Android.gitignore)。
-当然你可以排除你想要排除的，但是请确保别人 clone 下你的项目，可以马上跑起来。
+我们需要配置好 git ignore 文件，可以参考前面的谷歌项目示例，也可以参考 github 维护的 [示例](https://github.com/github/gitignore/blob/master/Android.gitignore)
+
+当然你可以排除你想要排除的，但是请确保别人 clone 下你的项目，可以马上跑起来
