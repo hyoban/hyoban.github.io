@@ -74,3 +74,29 @@
 #### 关于 index.md
 
 不要移除 content 文件夹下方的空白 `_index.md` 文件，hugo 的页面组织中，文件夹下方有多个 md 文件，或是文件夹用作分类时，它是不可缺少的。对于本博客，移除它会导致首页的三个按键无法显示。
+
+github 的 md 文件中似乎不支持使用 gist，但是我们有两种方式可以让它显示在我们的 hugo 博客里
+
+#### hugo 中使用 gist
+
+直接使用 gist 的集成，首先要配置 hugo 解析非标准 markdown
+
+```yaml
+markup:
+  goldmark:
+    renderer:
+      # parse html tags in markdown
+      # https://stackoverflow.com/questions/60329235
+      unsafe: true
+```
+
+复制粘贴 script 脚本即可
+
+<img width="502" alt="Screen Shot 2021-08-28 at 11 03 17 PM" src="https://user-images.githubusercontent.com/38493346/131222320-4e71a62f-c4fd-4f4a-8c5e-e7006b61eedc.png">
+
+使用 hugo 内置的解析，[参考](https://gohugo.io/content-management/shortcodes/#gist)
+
+我们可以使用如下的语法，最后的文件名是可选的，当我们从多个包含文件的 gist 中选择一个就很有作用了
+
+    {{< gist username gistname "filename" >}}
+
