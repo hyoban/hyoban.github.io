@@ -1,7 +1,7 @@
 ---
-title: 开始写一个 android 项目
+title: 如何开始写一个 android 项目
 date: 2021-07-27T18:11:20+08:00
-summary: 关于 Android studio 的配置
+summary: 关于 Android studio 的配置和踩坑记录
 ---
 
 ## android studio 设置
@@ -10,7 +10,15 @@ summary: 关于 Android studio 的配置
 2. 内存设置，设置到最大
 3. sdk 下载
 4. 代理配置
-5. 字体为 16 号
+
+## idea 系快捷键
+
+cmd + shift + u 转换大小写
+option + shift + click 多光标
+
+cmd + option + t 创建代码块供折叠
+cmd + . 折叠
+cmd + shift + + or - 快速折叠和展开全部代码块
 
 ## spotless 和 ktlint
 
