@@ -4,7 +4,37 @@ date: 2021-08-10T17:31:20+08:00
 summary: 拿到一台新的 mac 需要做哪些设置呢
 ---
 
+## 软件列表
+
+### 系统补全
+
+- [hackintool](https://github.com/headkaze/Hackintool) 便于替换 efi，修复睡眠
+- [alt tab](https://github.com/lwouis/alt-tab-macos) 提高切换软件体验
+- [mos](https://github.com/Caldis/Mos) 鼠标平滑
+- [appcleaner](https://freemacsoft.net/appcleaner/) 卸载软件残留
+
+### 必备工具
+
+- [clashx](https://github.com/yichengchen/clashX) or [clashx pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) 代理软件，pro可以作为旁路由
+- [sublime text](https://www.sublimetext.com/)
+- [chrome](https://www.google.com/chrome/)
+
+### 开发工具
+
+- [android studio](https://developer.android.com/studio/archive)
+- [idea](https://www.jetbrains.com/idea/download)
+- [vscode](https://github.com/microsoft/vscode)
+- [github desktop](https://desktop.github.com/)
+
+### 其他
+
+- [netnewswire](https://github.com/Ranchero-Software/NetNewsWire) rss 订阅器，支持 iCloud 同步，订阅 twitter
+- [telegram](https://github.com/telegramdesktop/tdesktop) app store 的版本更加流畅。
+- [logitech options](https://support.logi.com/hc/zh-cn/articles/360025297893) 或者 [直接下载 zip](https://download01.logi.com/web/ftp/pub/techsupport/options/Options_8.54.147.zip) （新版本会多安装一个 pop，注意安装老版本）
+
 ## 重置指南（nuc 8i5beh 限定）
+
+我有比较严重的强迫症，时常会想要去重装系统，所以就有了下面设置系统的流程。
 
 ### 注意事项
 
@@ -16,7 +46,7 @@ summary: 拿到一台新的 mac 需要做哪些设置呢
 
 切换缩放，设置完成 hidpi 重启后再调整回来。（可选，如果你的显示器默认可以开启 hidpi 的话）
 
-### mos（第三方软件）
+### mos
 
 1. 设置鼠标平滑
 2. 开机自启和隐藏图标
