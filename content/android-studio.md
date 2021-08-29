@@ -13,13 +13,13 @@ summary: 关于 Android studio 的配置和踩坑记录
 
 ## idea 系快捷键
 
-- cmd + shift + u 转换大小写
-
-- option + shift + click 多光标
-
-- cmd + option + t 创建代码块供折叠
-- cmd + . 折叠
-- cmd + shift + + or - 快速折叠和展开全部代码块
+ 快捷键                    | 功能           
+------------------------|--------------
+ cmd + shift + u        | 转换大小写        
+ option + shift + click | 多光标          
+ cmd + option + t       | 创建代码块供折叠     
+ cmd + .                | 折叠           
+ cmd + shift + + or -   | 快速折叠和展开全部代码块 
 
 ## spotless 和 ktlint
 
@@ -74,5 +74,5 @@ task clean(type: Delete) {
 
 ### 参考
 
-[Shrink, obfuscate, and optimize your app](https://developer.android.google.cn/studio/build/shrink-code)
-[使用 R8 压缩您的应用](https://mp.weixin.qq.com/s/zDx-SdsqargT4JB6oMIrTw)
+- [Shrink, obfuscate, and optimize your app](https://developer.android.google.cn/studio/build/shrink-code)
+- [使用 R8 压缩您的应用](https://mp.weixin.qq.com/s/zDx-SdsqargT4JB6oMIrTw)
