@@ -1,46 +1,17 @@
 ---
 title: mac 补全计划
 date: 2021-08-10T17:31:20+08:00
-summary: 拿到一台新的 mac 需要做哪些设置呢
+summary: 下载些软件，进行一些设置，让 mac 更加好用
 ---
 
-## 软件列表
-
-### 系统补全
-
-- [hackintool](https://github.com/headkaze/Hackintool) 便于替换 efi，修复睡眠
-- [alt tab](https://github.com/lwouis/alt-tab-macos) 提高切换软件体验
-- [mos](https://github.com/Caldis/Mos) 鼠标平滑
-- [appcleaner](https://freemacsoft.net/appcleaner/) 卸载软件残留
-
-### 必备工具
-
-- [clashx](https://github.com/yichengchen/clashX) or [clashx pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) 代理软件，pro可以作为旁路由
-- [sublime text](https://www.sublimetext.com/)
-- [chrome](https://www.google.com/chrome/)
-
-### 开发工具
-
-- [android studio](https://developer.android.com/studio/archive)
-- [idea](https://www.jetbrains.com/idea/download)
-- [vscode](https://github.com/microsoft/vscode)
-- [github desktop](https://desktop.github.com/)
-
-### 其他
-
-- [netnewswire](https://github.com/Ranchero-Software/NetNewsWire) rss 订阅器，支持 iCloud 同步，订阅 twitter
-- [telegram](https://github.com/telegramdesktop/tdesktop) app store 的版本更加流畅。
-- [logitech options](https://support.logi.com/hc/zh-cn/articles/360025297893) 或者 [直接下载 zip](https://download01.logi.com/web/ftp/pub/techsupport/options/Options_8.54.147.zip) （新版本会多安装一个 pop，注意安装老版本）
-
-## 重置指南（nuc 8i5beh 限定）
+## 重置指南（nuc8i5beh 限定）
 
 我有比较严重的强迫症，时常会想要去重装系统，所以就有了下面设置系统的流程。
 
 ### 注意事项
 
-**重装系统前需要退出设备和网页上的 apple 设备，否则会导致设备无法收到更新。**（原因是没有手动替换三码）
-
-开启 hidpi时，第一项选择 `(2) Enable HIDPI (with EDID)`
+1. **重装系统前需要退出设备和网页上的 apple 设备，否则会导致设备无法收到更新。**（原因是没有手动替换三码）
+2. 开启 hidpi时，第一项选择 `(2) Enable HIDPI (with EDID)`
 
 ### 显示器
 
@@ -114,6 +85,38 @@ export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_pr
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+#### brew 常用命令
+
+[autoremove](https://docs.brew.sh/Manpage#autoremove---dry-run) 卸载只是用于依赖的 formulae
+
+- `-n` 来查看将要卸载的列表。
+
+[cleanup](https://docs.brew.sh/Manpage#cleanup-options-formulacask-) 用于清除旧版本缓存（超出过期时间的）
+
+- `--prune=all` 清除所有的
+- `-n` 来查看将要清除的列表。
+
+[leaves](https://docs.brew.sh/Manpage#leaves---installed-on-request---installed-as-dependency) 展示不是依赖的 formulae 
+
+- `-r` 只显示手动安装的（手动安装的也可能是别的依赖）
+
+[list](https://docs.brew.sh/Manpage#list-ls-options-installed_formulainstalled_cask-) 展示所有安装的东西
+
+[rm](https://docs.brew.sh/Manpage#uninstall-remove-rm-options-installed_formulainstalled_cask-) 卸载
+
+- `-f` 强制执行（不管是否安装了软件）（可以起到删除非 brew 安装的软件效果）
+- `--zap` 删除和 cask 相关的文件，查看对应的脚本可以看到删除的文件和目录。
+
+[update](https://docs.brew.sh/Manpage#update-options) 获取更新数据
+
+[upgrade](https://docs.brew.sh/Manpage#upgrade-options-outdated_formulaoutdated_cask-) 执行更新，加上软件名来更新指定项目。
+
+- `-n` 来查看将要更新的列表。
+
+[bundle dump](https://docs.brew.sh/Manpage#bundle-subcommand) 完成当前环境的导出，实际上就是记录我们安装的命令
+
+bundle 恢复安装，需要当前目录有之前生成的 Brewfile 。
+
 ### 开启 hidpi
 
 ```sh
@@ -179,7 +182,7 @@ export ANDROID_SDK_ROOT="/Users/hyoban/Library/Android/sdk"
 export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 ```
 
-#### 主题
+### 主题
 
 1. [Dracula](https://draculatheme.com/terminal) [直接下载](https://github.com/dracula/terminal-app/archive/master.zip)
 2. 设置字体为 Monaco，字号为16
@@ -237,3 +240,37 @@ export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 目前主要用于 github commit 认证
 
     brew install gnupg
+
+### speedtest-cli
+
+在终端进行网络测试
+
+    brew install speedtest-cli
+
+## 软件列表
+
+### 系统补全
+
+- [hackintool](https://github.com/headkaze/Hackintool) 便于替换 efi，修复睡眠
+- [alt tab](https://github.com/lwouis/alt-tab-macos) 提高切换软件体验
+- [mos](https://github.com/Caldis/Mos) 鼠标平滑
+- [appcleaner](https://freemacsoft.net/appcleaner/) 卸载软件残留
+
+### 必备工具
+
+- [clashx](https://github.com/yichengchen/clashX) or [clashx pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) 代理软件，pro可以作为旁路由
+- [sublime text](https://www.sublimetext.com/)
+- [chrome](https://www.google.com/chrome/)
+
+### 开发工具
+
+- [android studio](https://developer.android.com/studio/archive)
+- [idea](https://www.jetbrains.com/idea/download)
+- [vscode](https://github.com/microsoft/vscode)
+- [github desktop](https://desktop.github.com/)
+
+### 其他
+
+- [netnewswire](https://github.com/Ranchero-Software/NetNewsWire) rss 订阅器，支持 iCloud 同步，订阅 twitter
+- [telegram](https://github.com/telegramdesktop/tdesktop) app store 的版本更加流畅。
+- [logitech options](https://support.logi.com/hc/zh-cn/articles/360025297893) 或者 [直接下载 zip](https://download01.logi.com/web/ftp/pub/techsupport/options/Options_8.54.147.zip) （新版本会多安装一个 pop，注意安装老版本）
