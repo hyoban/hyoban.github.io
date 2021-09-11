@@ -69,8 +69,8 @@ RequestBody create(final @Nullable MediaType contentType, final File file)
 
 ## 其他的写法
 
-okhttp 为我们提供了一些 kotlin 的扩展函数，可以使写法更具有 kotlin 的风格。
-比如创建 minetype，`"image/png".toMediaType()`，以及创建请求体，`File("docs/images/logo-square.png").asRequestBody(MEDIA_TYPE_PNG)`。
+okhttp 为我们提供了一些 kotlin 的扩展函数，可以使写法更简洁。
+比如创建 MIME 类型，`"image/png".toMediaType()`；在比如创建请求体，`File("docs/images/logo-square.png").asRequestBody(MEDIA_TYPE_PNG)`。
 你可以在参考示例的链接中了解更多。
 
 ## 参考
