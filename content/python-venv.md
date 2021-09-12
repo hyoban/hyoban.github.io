@@ -19,7 +19,7 @@ macOS 中默认安装了 python，但是是 2.x 的版本，通常我们需要�
 
 ## pip 管理包
 
-以下 <pkn> 表示 package name。
+以下 \<pkn\> 表示 package name。
 
 安装
 
