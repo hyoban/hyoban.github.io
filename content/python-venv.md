@@ -19,6 +19,8 @@ macOS 中默认安装了 python，但是是 2.x 的版本，通常我们需要�
 
 ## pip 管理包
 
+以下 <pkn> 表示 package name。
+
 安装
 
     pip install [--upgrade] <pkn> [= 1.0.0]
@@ -43,7 +45,10 @@ macOS 中默认安装了 python，但是是 2.x 的版本，通常我们需要�
 
     pip install -r requirements.txt
 
+你可以在 pip 文档中查看更多信息。
+
 ## 参考
 
 - [命令行与环境](https://docs.python.org/zh-cn/3/using/cmdline.html)
 - [虚拟环境和包](https://docs.python.org/zh-cn/3/tutorial/venv.html)
+- [pip 文档](https://pip.pypa.io/en/stable/)
