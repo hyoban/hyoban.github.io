@@ -1,8 +1,4 @@
----
-title: 从 activity result 到适配 SAF
-date: 2021-09-11T19:31:20+08:00
-summary: SAF 让我们减少软件不必要的存储权限
----
+# 从 activity result 到适配 SAF
 
 ## Activity result api
 

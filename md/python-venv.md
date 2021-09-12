@@ -1,8 +1,4 @@
----
-title: python 虚拟环境
-date: 2021-06-15T17:31:20+08:00
-summary: 隔离项目和系统的 python 环境
----
+# python 虚拟环境
 
 macOS 中默认安装了 python，但是是 2.x 的版本，通常我们需要手动安装 python3。
 安装之后，我们需要使用 python3 和 pip3 对应的命令，而且把包全安装到系统环境下，好像也不是很优雅。
