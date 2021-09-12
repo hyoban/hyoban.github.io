@@ -6,16 +6,16 @@ summary: 介绍序列化的一些经验
 
 ## 和后端勾心斗角
 
+### 传递给你非标准格式 json
+
 如果后台直接设置响应体格式为 string 的话，就会报错 `json document was not fully consumed`。
 参考 [GitHub issue](https://github.com/square/retrofit/issues/3004#issuecomment-514671419)
 
-### 引入库
+引入库
 
 ```
 implementation "com.squareup.retrofit2:converter-scalars:2.5.0"
 ```
-
-### 添加
 
 添加在 gson 之前
 
@@ -27,6 +27,25 @@ Retrofit retrofit = new Retrofit.Builder()
         .addConverterFactory(GsonConverterFactory.create())
         .build();
 ```
+
+### post 请求的请求体格式需要动态指定
+
+如果是固定格式的请求很好处理，直接构建对应类型的 data class 作为参数即可。
+而请求体格式不确定的话就麻烦一点了，我们只能指定参数为 RequestBody。
+
+```kt
+fun createJsonRequestBody(vararg params: Pair<String, String>) =
+        RequestBody.create(
+            okhttp3.MediaType.parse("application/json; charset=utf-8"), 
+            JSONObject(mapOf(*params)).toString())
+```
+
+调用的时候传递多个 pair 即可。
+
+## 参考
+
+[How to POST raw whole JSON in the body of a Retrofit request?](https://stackoverflow.com/a/36821182)
+
 
 ## 放弃 Gson
 
