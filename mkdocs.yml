@@ -1,0 +1,30 @@
+site_name: Hyoban's Note
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - navigation.sections
+
+markdown_extensions:
+  # markdown highlight
+  - pymdownx.highlight
+  - pymdownx.superfences
+  # add HTML attributes and CSS classes to Markdown elements
+  - attr_list
+  # 修改 toc 链接为具体标题
+  - toc:
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  # 提供下划线，删除线的支持
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
+nav:
+  - Home: index.md
+  - Android:
+    - 数据和文件存储:
+      - 文档和其它文件: android/data-storage/storage-access-framework.md
+
