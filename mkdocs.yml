@@ -1,7 +1,8 @@
-site_name: Hyoban's Note
+site_name: Hyoban 的笔记
 
 theme:
   name: material
+  language: zh
   features:
     - navigation.instant
     - navigation.tabs
@@ -23,8 +24,13 @@ markdown_extensions:
   - pymdownx.tilde
 
 nav:
-  - Home: index.md
+  - 主页: index.md
   - Android:
+    - 准备:
+      - 如何开始写一个 android 项目: android/prepare/start-writing-an-android-project.md
+    - Intent:
+      - Activity Result: android/intent/activity-result.md
+      - 常用的 Intent: android/intent/common-intents.md
     - 数据和文件存储:
       - 文档和其它文件: android/data-storage/storage-access-framework.md
-
+      - URI和文件操作: android/data-storage/use-uri-to-operate-file.md

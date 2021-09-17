@@ -1,6 +1,6 @@
 # Storage Access Framework
 
-本文不会介绍如何进行文件操作，只会介绍如何拿到文件或者文件夹的 uri。
+本文不会介绍如何进行文件操作，只会介绍如何拿到文件或者文件夹的 uri，后续请参考 [通过 uri 来操作文件](use-uri-to-operate-file.md)
 
 > 使用场景
 
@@ -8,41 +8,31 @@
 
 > 是否需要申请权限
 
-不需要。因为确定读写的文件位置都是用户自己选定的，系统授予软件该用户选的文件或者文件夹的访问权限。
+不需要。因为确定读写的文件位置都是用户自己选定的，系统授予对应部分的访问权限。
 
 > 其它程序是否可以访问
 
 可以，通过 SAF 或者程序本身拥有文件访问权限
 
-额外的一个想法，关于软件自动备份数据的情况，该数据并非共享给其它软件使用，但是需要在软件卸载之后保持。
-这种情景似乎并不符合共享存储的设计，但是在不请求文件访问权限的情况下，似乎只有这一种方式能实现。
-
 ## 创建文件
 
-使用 Activity result api，选择 CreateDocument 这个协议（对应的 intent action 为 ACTION_CREATE_DOCUMENT）。
-在 launch 函数中，我们可以设置一个预置的文件名称，用户可以稍后自由修改。
-不过我们不能覆盖已有的文件，如果存在同名文件，系统会自动添加数字后缀。
-在 onResult 的回调中我们可以拿到用户选择的 uri。
-请注意**可能为空**，因为用户可能取消了选择的操作。之后我们可以对该 uri 进行读写操作。
+使用 [Activity result API](../intent/activity-result.md)，选择 `CreateDocument` 这个协议（对应 ACTION_CREATE_DOCUMENT）。
 
-此外，你可能想要指定创建文件的 MIME 类型，或者是打开文件选择器时显示的文件路径的 uri。
-我们可以重写 CreateDocument 协议的 createIntent 这个函数来指定。
-需要注意的是，这里的 uri 需要是[经过授权的文件夹路径](https://stackoverflow.com/a/54099021/15548365)。
+在 `launch` 函数中，我们可以设置一个预置的文件名称，用户可以稍后自由修改。
+如果存在同名文件，不会覆盖已有的文件，系统会自动添加数字后缀。
+
+在 `onResult` 的回调中我们可以拿到用户选择的 uri。
+请注意可能为空，因为用户可能取消了选择的操作。之后我们可以对该 uri 进行读写操作。
+
+此外，你可以 [重写协议的 `createIntent` 方法](../../intent/activity-result/#补充协议信息)，通过设置 `type` 指定创建文件的 MIME 类型，或者是指定 `EXTRA_INITIAL_URI` 来打开文件选择器时显示的文件路径的 uri。
+需要注意的是，这里的 uri 需要是 [经过授权的文件夹路径](https://stackoverflow.com/a/54099021/15548365)。
 
 ```kotlin
-contract = object : ActivityResultContracts.CreateDocument() {
-    override fun createIntent(context: Context, input: String): Intent {
-        return super.createIntent(context, input).apply {
-            type = "application/json"
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                putExtra(DocumentsContract.EXTRA_INITIAL_URI, uri)
-            }
-        }
-    }
+type = "application/json"
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+    putExtra(DocumentsContract.EXTRA_INITIAL_URI, uri)
 }
 ```
-
-事实上，我们都可以重写协议的 createIntent 方法来传递一些其他的内容到 intent 中。
 
 ## 打开文件
 
