@@ -7,7 +7,7 @@
 ### 注意事项
 
 1. **重装系统前需要退出设备和网页上的 apple 设备，否则会导致设备无法收到更新。**（原因是没有手动替换三码）
-2. 开启 hidpi时，第一项选择 `(2) Enable HIDPI (with EDID)`
+2. 开启 hidpi 时，第一项选择 `(2) Enable HIDPI (with EDID)`
 
 ### 显示器
 
@@ -92,7 +92,7 @@ export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_pr
 - `--prune=all` 清除所有的
 - `-n` 来查看将要清除的列表。
 
-[leaves](https://docs.brew.sh/Manpage#leaves---installed-on-request---installed-as-dependency) 展示不是依赖的 formulae 
+[leaves](https://docs.brew.sh/Manpage#leaves---installed-on-request---installed-as-dependency) 展示不是依赖的 formulae
 
 - `-r` 只显示手动安装的（手动安装的也可能是别的依赖）
 
@@ -129,13 +129,13 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/mast
 
 > terminal 显示 hostname 之前会先根据本机 IP 做一次 rDNS 反向查询，就是通过 ip 地址查询 hostname，过程与 DNS 类似。
 > rDNS 反向查询常用在 traceroute 以及反垃圾邮件技术中，terminal 显示查询到的 hostname，如果没有查询到，那么使用本机设置的 hostname。
-> 本机 IP 通常是局域网 IP 地址（保留IP地址），一般是查不到的，所以 terminal 一般显示的本机设置的 hostname，比如dangchujiubugaixiafan's-macbook。
-> 上面提到，局域网 IP 地址一般是查不到 hostname，是因为 ISP 提供商或者用户防火窗的屏蔽保留 IP 地址，因为保留 IP 地址在公网中没啥用，即便是没有被屏蔽掉，rDNS 服务器一般也会关闭响应保留IP地址的查询请求。凡事都有例外，rDNS 服务器对这种保留 IP 地址对查询一律返回 bogon。在 ipv4 对地址划分中，除了公网分配在用对 IP 地址外，其余保留 IP 地址统一叫做bogon space。
+> 本机 IP 通常是局域网 IP 地址（保留 IP 地址），一般是查不到的，所以 terminal 一般显示的本机设置的 hostname，比如 dangchujiubugaixiafan's-macbook。
+> 上面提到，局域网 IP 地址一般是查不到 hostname，是因为 ISP 提供商或者用户防火窗的屏蔽保留 IP 地址，因为保留 IP 地址在公网中没啥用，即便是没有被屏蔽掉，rDNS 服务器一般也会关闭响应保留 IP 地址的查询请求。凡事都有例外，rDNS 服务器对这种保留 IP 地址对查询一律返回 bogon。在 ipv4 对地址划分中，除了公网分配在用对 IP 地址外，其余保留 IP 地址统一叫做 bogon space。
 
 #### 参考
 
-1. [Mac修复hostname被篡改为bogon](https://zhuanlan.zhihu.com/p/55827741)
-2. [问：mac终端用户名不知何故变成了192](https://discussionschinese.apple.com/thread/76800?answerId=140246186322#140246186322)
+1. [Mac 修复 hostname 被篡改为 bogon](https://zhuanlan.zhihu.com/p/55827741)
+2. [问：mac 终端用户名不知何故变成了 192](https://discussionschinese.apple.com/thread/76800?answerId=140246186322#140246186322)
 3. [DNS 与路由器设置马克](https://zhuanlan.zhihu.com/p/105942315)
 
 ### [oh my zsh](https://github.com/ohmyzsh/ohmyzsh)
@@ -166,9 +166,9 @@ alias pip='noglob pip'
 export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+#   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+#   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # set plugins
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting sublime)
@@ -176,16 +176,24 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting sublime)
 # set adb
 export ANDROID_SDK_ROOT="/Users/hyoban/Library/Android/sdk"
 export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
+
+# if [ -r ~/.zshrc ]; then echo 'export GPG_TTY=$(tty)' >> ~/.zshrc; \
+#   else echo 'export GPG_TTY=$(tty)' >> ~/.zprofile; fi
+
+alias hstart="/usr/local/Cellar/hadoop/3.3.1/sbin/start-dfs.sh"
+alias hstop="/usr/local/Cellar/hadoop/3.3.1/sbin/stop-dfs.sh"
+
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-8.jdk/Contents/Home"
 ```
 
 ### 主题
 
 1. [Dracula](https://draculatheme.com/terminal) [直接下载](https://github.com/dracula/terminal-app/archive/master.zip)
-2. 设置字体为 Monaco，字号为16
+2. 设置字体为 Monaco，字号为 16
 
 ### git 配置
 
-#### 安装 github desktop 
+#### 安装 github desktop
 
 设置默认分支为 master
 
@@ -198,7 +206,7 @@ export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 完成后的 .gitconfig 有如下内容
 
     [core]
-    	excludesfile = /Users/<username>/.gitignore_global
+        excludesfile = /Users/<username>/.gitignore_global
 
 添加需要排除的文件
 
@@ -254,7 +262,7 @@ export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 
 ### 必备工具
 
-- [clashx](https://github.com/yichengchen/clashX) or [clashx pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) 代理软件，pro可以作为旁路由
+- [clashx](https://github.com/yichengchen/clashX) or [clashx pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) 代理软件，pro 可以作为旁路由
 - [sublime text](https://www.sublimetext.com/)
 - [chrome](https://www.google.com/chrome/)
 
