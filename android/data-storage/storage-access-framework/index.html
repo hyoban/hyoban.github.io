@@ -1,0 +1,904 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>文档和其它文件 - Hyoban 的笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#storage-access-framework" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Hyoban 的笔记" class="md-header__button md-logo" aria-label="Hyoban 的笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hyoban 的笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              文档和其它文件
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../big-data/set-up-hadoop/" class="md-tabs__link">
+        Big data
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../prepare/start-writing-an-android-project/" class="md-tabs__link md-tabs__link--active">
+        Android
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Hyoban 的笔记" class="md-nav__button md-logo" aria-label="Hyoban 的笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hyoban 的笔记
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Big data
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Big data" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Big data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        Hadoop
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Hadoop" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Hadoop
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../big-data/set-up-hadoop/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        Hive
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Hive" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Hive
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../big-data/set-up-hive/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        Flume
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Flume" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Flume
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../big-data/set-up-flume/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Android
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Android" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        准备
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="准备" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          准备
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prepare/start-writing-an-android-project/" class="md-nav__link">
+        如何开始写一个 android 项目
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Intent
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Intent" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Intent
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intent/activity-result/" class="md-nav__link">
+        Activity Result
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intent/common-intents/" class="md-nav__link">
+        常用的 Intent
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        数据和文件存储
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="数据和文件存储" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          数据和文件存储
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          文档和其它文件
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        文档和其它文件
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#创建文件" class="md-nav__link">
+    创建文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#打开文件" class="md-nav__link">
+    打开文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#获取文件夹的读写权限" class="md-nav__link">
+    获取文件夹的读写权限
+  </a>
+  
+    <nav class="md-nav" aria-label="获取文件夹的读写权限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#获取永久权限" class="md-nav__link">
+    获取永久权限
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#在被授权的文件夹下进行操作" class="md-nav__link">
+    在被授权的文件夹下进行操作
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../use-uri-to-operate-file/" class="md-nav__link">
+        URI和文件操作
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#创建文件" class="md-nav__link">
+    创建文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#打开文件" class="md-nav__link">
+    打开文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#获取文件夹的读写权限" class="md-nav__link">
+    获取文件夹的读写权限
+  </a>
+  
+    <nav class="md-nav" aria-label="获取文件夹的读写权限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#获取永久权限" class="md-nav__link">
+    获取永久权限
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#在被授权的文件夹下进行操作" class="md-nav__link">
+    在被授权的文件夹下进行操作
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="storage-access-framework">Storage Access Framework</h1>
+<p>本文不会介绍如何进行文件操作，只会介绍如何拿到文件或者文件夹的 uri，后续请参考 <a href="../use-uri-to-operate-file/">通过 uri 来操作文件</a></p>
+<blockquote>
+<p>使用场景</p>
+</blockquote>
+<p>需要保存非私密文档数据（而非媒体文件）到手机上，并且希望数据在软件卸载之后仍然存在。</p>
+<blockquote>
+<p>是否需要申请权限</p>
+</blockquote>
+<p>不需要。因为确定读写的文件位置都是用户自己选定的，系统授予对应部分的访问权限。</p>
+<blockquote>
+<p>其它程序是否可以访问</p>
+</blockquote>
+<p>可以，通过 SAF 或者程序本身拥有文件访问权限</p>
+<h2 id="创建文件">创建文件</h2>
+<p>使用 <a href="../../intent/activity-result/">Activity result API</a>，选择 <code>CreateDocument</code> 这个协议（对应 ACTION_CREATE_DOCUMENT）。</p>
+<p>在 <code>launch</code> 函数中，我们可以设置一个预置的文件名称，用户可以稍后自由修改。
+如果存在同名文件，不会覆盖已有的文件，系统会自动添加数字后缀。</p>
+<p>在 <code>onResult</code> 的回调中我们可以拿到用户选择的 uri。
+请注意可能为空，因为用户可能取消了选择的操作。之后我们可以对该 uri 进行读写操作。</p>
+<p>此外，你可以 <a href="../../intent/activity-result/#补充协议信息">重写协议的 <code>createIntent</code> 方法</a>，通过设置 <code>type</code> 指定创建文件的 MIME 类型，或者是指定 <code>EXTRA_INITIAL_URI</code> 来打开文件选择器时显示的文件路径的 uri。
+需要注意的是，这里的 uri 需要是 <a href="https://stackoverflow.com/a/54099021/15548365">经过授权的文件夹路径</a>。</p>
+<div class="highlight"><pre><span></span><code><span class="n">type</span> <span class="o">=</span> <span class="s">&quot;application/json&quot;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">Build</span><span class="p">.</span><span class="na">VERSION</span><span class="p">.</span><span class="na">SDK_INT</span> <span class="o">&gt;=</span> <span class="n">Build</span><span class="p">.</span><span class="na">VERSION_CODES</span><span class="p">.</span><span class="na">O</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">putExtra</span><span class="p">(</span><span class="n">DocumentsContract</span><span class="p">.</span><span class="na">EXTRA_INITIAL_URI</span><span class="p">,</span> <span class="n">uri</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="打开文件">打开文件</h2>
+<ol>
+<li>同上，将协议改为 OpenDocument（对应的 intent action 为 ACTION_OPEN_DOCUMENT）。</li>
+<li>launch 函数中我们传递字符串数组作为参数，字符串为我们限制用户可以选择的 mime 类型。</li>
+<li>拿到 uri，判空，然后就可以进行读写操作。</li>
+</ol>
+<p>我们同样的也可以通过 EXTRA_INITIAL_URI 来设置文件选择器打开时的初始目录。</p>
+<p>需要注意的是，用户无法通过文件选择器打开 <code>Android/data/</code> 和 <code>Android/obb/</code> 目录以及其子目录中的文件。</p>
+<h2 id="获取文件夹的读写权限">获取文件夹的读写权限</h2>
+<p>通过用户选择，程序可以获得某个人文件夹的访问权限，程序无法访问除此之外的文件。</p>
+<ol>
+<li>使用 OpenDocumentTree 协议来选择文件夹（对应 ACTION_OPEN_DOCUMENT_TREE）。</li>
+<li>launch 函数可以传递指定文件选择器的起始位置的 uri。</li>
+<li>拿到可以访问的文件夹的 uri，判空。</li>
+</ol>
+<p>除了前面提到的目录，用户也不可以选择存储的根目录，下载目录<a href="https://developer.android.com/training/data-storage/shared/documents-files#document-tree-access-restrictions">等文件夹</a>。</p>
+<h3 id="获取永久权限">获取永久权限</h3>
+<p>上个步骤中我们就可以对拿到授权的文件夹内的文件进行操作，但是用户设备重启之后我们将失去该文件夹访问权限。
+我们可以按照如下的方法来获取永久的访问权限。
+但是请注意，如果用户手动删除或者移动了该文件夹的话，程序还是会失去访问权限。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">val</span> <span class="nv">takeFlags</span> <span class="o">=</span> <span class="n">Intent</span><span class="p">.</span><span class="na">FLAG_GRANT_READ_URI_PERMISSION</span> <span class="n">or</span> <span class="n">Intent</span><span class="p">.</span><span class="na">FLAG_GRANT_WRITE_URI_PERMISSION</span>
+<span class="n">context</span><span class="p">.</span><span class="na">contentResolver</span><span class="p">.</span><span class="na">takePersistableUriPermission</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="n">takeFlags</span><span class="p">)</span>
+</code></pre></div>
+<p>此外，你应该需要保存下 uri 的值，以便以后进行文件操作。而如下的操作可以获取便于展示的文件目录。</p>
+<div class="highlight"><pre><span></span><code><span class="n">uri</span><span class="p">.</span><span class="na">lastPathSegment</span><span class="o">?.</span><span class="na">removePrefix</span><span class="p">(</span><span class="s">&quot;primary:&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="在被授权的文件夹下进行操作">在被授权的文件夹下进行操作</h2>
+<p>首先需要添加依赖，<code>implementation "androidx.documentfile:documentfile:1.0.1"</code></p>
+<blockquote>
+<p>获取当前根目录</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kd">val</span> <span class="nv">home</span> <span class="o">=</span> <span class="n">DocumentFile</span><span class="p">.</span><span class="na">fromTreeUri</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">Uri</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">uriString</span><span class="p">))</span>
+</code></pre></div>
+<blockquote>
+<p>判断目录下有无对应文件</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">home</span><span class="o">?.</span><span class="na">findFile</span><span class="p">(</span><span class="n">displayName</span><span class="p">)</span>
+</code></pre></div>
+<p>参数为文件名（含后缀），如果存在则返回 DocumentFile，否则为空。通过 getUri 函数获取到 uri 后就可以进行读写操作了。</p>
+<blockquote>
+<p>创建新的文件</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">home</span><span class="o">?.</span><span class="na">createFile</span><span class="p">(</span><span class="n">mimeType</span><span class="p">,</span> <span class="n">displayName</span><span class="p">)</span>
+</code></pre></div>
+<p>第一个参数为文件的 mime 类型，第二个参数为文件名（不含后缀）。</p>
+<p>还有其它的函数可用，参考文档即可。</p>
+<blockquote>
+<p>一些坑</p>
+</blockquote>
+<p>当你通过 documentFile 执行删除操作之后，就无法通过它的 uri 来进行文件操作了，会报错。
+因为此时系统无法判断该 uri 是否位于你可以进行操作的目录下，尽管它实际上是的。
+这里和获取文件夹权限后，文件夹的更改会导致权限丢失的情况是一致的。</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../intent/common-intents/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 常用的 Intent" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              常用的 Intent
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../use-uri-to-operate-file/" class="md-footer__link md-footer__link--next" aria-label="下一页: URI和文件操作" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              URI和文件操作
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "navigation.sections"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+    
+  </body>
+</html>
