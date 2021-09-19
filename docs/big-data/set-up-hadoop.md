@@ -10,7 +10,7 @@
 sudo ln -sfn $(brew --prefix)/opt/openjdk@8/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-8.jdk
 ```
 
-这会在 JavaVirtualMachines 目录下创建软链接到你的 jdk 下。而只是配置环境的话，我们环境变量里面设置一下 JAVA_HOME 即可
+这会在 JavaVirtualMachines 目录下创建软链接到你的 jdk 下，然后你的 IDEA 就可以识别到这个 jdk 了。而只是配置环境的话，我们环境变量里面设置一下 JAVA_HOME 即可
 
 ```sh
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-8.jdk/Contents/Home"
@@ -26,11 +26,7 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-8.jdk/Contents/Home"
 
 参考 `hadoop-env.sh` 文件，在 macOS 上我们不需要设置此项。
 
-> The java implementation to use. By default, this environment
->
-> variable is REQUIRED on ALL platforms except OS X!
->
-> export JAVA_HOME=
+> The java implementation to use. By default, this environment variable is REQUIRED on ALL platforms except OS X!
 
 ### 其它
 
@@ -57,6 +53,12 @@ alias hstop="/usr/local/Cellar/hadoop/3.3.1/sbin/stop-dfs.sh"
 
 它并不影响正常工作，消除警告需要自己在 macOS 上编译源码，参考 [问题定位][8] 和 [Build Hadoop source code on macOS][7]。我就不编译了，消除强迫症的方法是解决的方法更加麻烦。
 
+## 其它可能出现的错误
+
+> Hadoop cluster setup - java.net.ConnectException: Connection refused
+
+参考 [stackoverflow][9]，我们需要先关闭，然后重新格式化 namenode。
+
 ## 总结
 
 如此一个可用的 hdfs 就搭建完成了，使用 `hstart` 启动之后可以访问 `http://localhost:9870/` 来查看效果，总体上比在 Linux 上还是方便不少。关于更多设置和使用，请看官方文档
@@ -69,3 +71,4 @@ alias hstop="/usr/local/Cellar/hadoop/3.3.1/sbin/stop-dfs.sh"
 [6]: https://stackoverflow.com/a/51905683/15548365
 [7]: https://medium.com/@zekexu/build-hadoop-source-code-on-macos-3f932780fd84
 [8]: https://stackoverflow.com/q/19943766/15548365
+[9]: https://stackoverflow.com/a/42281292/15548365
